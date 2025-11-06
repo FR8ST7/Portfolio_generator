@@ -1,0 +1,108 @@
+/* =======================
+   GLOBAL FULLSCREEN LAYOUT
+   ======================= */
+
+/* Make app take full screen */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Remove text centering and max-width limits */
+#root {
+  display: flex;
+  flex-direction: column;
+  max-width: none;       /* removes the 1280px limit from Vite */
+  text-align: initial;   /* reset centered text */
+}
+
+/* General reset for consistent sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* =======================
+   SCROLLBAR STYLING
+   ======================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* =======================
+   LOGO ANIMATION (optional/fancy)
+   ======================= */
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* =======================
+   OPTIONAL CARD STYLES
+   (legacy compatibility for any leftover vite demo elements)
+   ======================= */
+.card {
+  padding: 2em;
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* =======================
+   RESPONSIVE DASHBOARD LAYOUT TWEAKS
+   ======================= */
+@media (max-width: 900px) {
+  .dashboard-sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .dashboard-main {
+    padding: 20px;
+  }
+}
