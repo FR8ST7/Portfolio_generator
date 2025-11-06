@@ -1,8 +1,7 @@
-// src/utils/axios.js
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://portfolio-generator-lf2a.onrender.com/api", // ✅ Render backend live URL
 });
 
 // auto attach token
